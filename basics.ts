@@ -18,3 +18,5 @@ let resultPhrase = 'Result is : ';
 const result = add(number1, number2, printResult, resultPhrase);
 
 console.log(result);
+
+export {};
