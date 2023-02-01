@@ -1,6 +1,9 @@
 // enum resultConversion { AS_NUMBER, AS_TEXT }
 
-function combine(input1: number | string, input2: number | string, resultConversion: ('as-number' | 'as-text')) {
+type Combinable = number | string;
+type ConversionDescripter = 'as-number' | 'as-text'
+
+function combine(input1: Combinable, input2: Combinable, resultConversion: ConversionDescripter) {
     let result;
     if (typeof input1 == 'number' && typeof input2 == 'number' || resultConversion == "as-number") {
         result = +input2 + +input2;
