@@ -1,7 +1,7 @@
 "use strict";
-exports.__esModule = true;
-var userInput; // string | number
-var userName;
+Object.defineProperty(exports, "__esModule", { value: true });
+let userInput; // string | number
+let userName;
 userInput = 5;
 userInput = 'MAX';
 if (typeof userInput == 'string') {
@@ -11,4 +11,5 @@ if (typeof userInput == 'string') {
 function generateError(message, code) {
     throw { message: message, errorCode: code };
 }
-generateError('An error occurred!', 500);
+const result = generateError('An error occurred!', 500);
+console.log(result);

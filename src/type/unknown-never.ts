@@ -8,10 +8,12 @@ if (typeof userInput == 'string') {
 }
 // userName = userInput; 에러
 
-function generateError(message: string, code: number) {
+function generateError(message: string, code: number): never {
     throw {message: message, errorCode: code}
 }
 
-generateError('An error occurred!', 500);
+const result = generateError('An error occurred!', 500);
+
+console.log(result)
 
 export {}
