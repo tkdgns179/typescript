@@ -33,13 +33,33 @@ type Numberic = number | boolean;
 
 type Universal = Combinable & Numberic;
 
-function add(a: Combinable, b: Combinable) {
+function add1(a: number, b: number): number;
+function add1(a: string, b: string): string;
+function add1(a: string, b: number): string;
+function add1(a: number, b: string): string;
+
+function add1(a: Combinable, b: Combinable) {
     if (typeof a === 'string' || typeof b === 'string') {
         return a.toString() + b.toString();
     }
 
     return a + b;
 }
+
+const result = add1('Max', ' Schwarz');
+
+const fetchedUserData = {
+    id: 'u1',
+    name: 'Max',
+    // job: { title: 'CEO', description: 'My own company'}
+};
+
+console.log(fetchedUserData?.job?.title);
+
+const userInput = null;
+
+const storedData = userInput ?? 'DEFAULT';
+
 
 type UnknownEmployee = Employee | Admin;
 
@@ -133,4 +153,3 @@ const errorBag: ErrorContainer = {
     email: 'Not a valid email!!',
     username: 'Must start with a character!'
 }
-console.log(errorBag);
