@@ -61,3 +61,5 @@ user1 = new Person();
 //     }
 // }
 user1.greet('Hi there - I\'m');
+
+export default Person;

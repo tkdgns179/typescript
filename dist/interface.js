@@ -2,6 +2,7 @@
 // type Person {
 //     readonly name: string;
 //     age: number;
+Object.defineProperty(exports, "__esModule", { value: true });
 let add;
 add = (n1, n2) => {
     return n1 + n2;
@@ -30,3 +31,4 @@ user1 = new Person();
 //     }
 // }
 user1.greet('Hi there - I\'m');
+exports.default = Person;

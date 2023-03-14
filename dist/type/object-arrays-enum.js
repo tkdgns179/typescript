@@ -1,5 +1,7 @@
 "use strict";
 // interface person { name: string; age: number};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.person = void 0;
 // const ADMIN = 0
 // const READ_ONLY = 1
 // const AUTHOR = 2
@@ -15,6 +17,7 @@ const person = {
     hobbies: ['Sports', 'Cooking'],
     role: Role.ADMIN
 };
+exports.person = person;
 {
     person.role == Role.ADMIN && console.log('is admin');
 }
